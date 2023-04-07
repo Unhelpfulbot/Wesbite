@@ -3,7 +3,20 @@ body{
     padding: 0;
     background-color: rgb(197, 197, 197);
 }
+/* General CSS */
+.starthidden{
+    display: none;
+}
 
+.marg{
+    margin: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: 600;
+    background-color: gray;
+    border: double black 6px;
+    padding: 5px;
+}
 /* Heading */
 header{
     margin: 0;
@@ -13,6 +26,8 @@ header{
     align-content: center;
     background-color: black;
     height: 100px;
+    min-width: 800px;
+    width: 100%;
     color: white;
     border-bottom: 4px gray solid;
     background-image: url(Thecity.jpg);
@@ -42,6 +57,8 @@ header:hover{
 /* Navigation Bar */
 div.dropdown{
     height: 100px;
+    min-width: 800px;
+    width: 100%;
     position: relative;
     display: flex;
     background-image: url(Sky.jpg);
@@ -56,6 +73,7 @@ div.dropdown{
 div#filter{
     display: flex;
     width: 100%;
+    min-width: 800px;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     justify-content: center;
@@ -88,6 +106,8 @@ p#MHead{
 nav.navibar{
     position: relative;
     height: 300px;
+    width: 100%;
+    min-width: 800px;
     display: none;
     background-image: url(Sky.jpg);
     background-size: 1600px;
@@ -145,15 +165,18 @@ button#Home{
     border-color: blue;
 }
 
-
+div.display{
+    width: 100%;
+    min-width: 800px;
+}
 /* Info Display Layout*/
 div.infodisplay{
     position: relative;
     display: flex;
+    margin-top: 1%;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 1%;
-    min-width: 700px;
+    min-width: 600px;
     max-width: 90%;
     min-height: 300px;
     max-height: 800px;
@@ -161,12 +184,13 @@ div.infodisplay{
     background-color: white;
     border: black 4px solid;
 }
+
 div.infodisplay2{
     position: relative;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 1%;
-    min-width: 700px;
+    min-width: 600px;
     max-width: 90%;
     min-height: 300px;
     max-height: 800px;
@@ -181,11 +205,12 @@ div.sidebar{
     min-width: 200px;
     max-width: 300px;
     min-height: 300px;
-    max-height: 800px;
+    max-height: 100%;
     background-image:url(Space.jpg);
     background-position: 400px, 0px;
     border-right: black 4px solid;
     float: left;
+    overflow: hidden;
 }
 
 div#Resumepage, div#Educationpage, div#Projectspage, div#Education2page{
@@ -196,6 +221,7 @@ div#Resumepage, div#Educationpage, div#Projectspage, div#Education2page{
 #HomeText{
     padding: 2%;
     float: right;
+    overflow: scroll;
 }
 #HomeText2{
     justify-content: center;
@@ -252,6 +278,40 @@ hr#introhr{
     width: 99%;
 }
 
+div#Homecontent{
+    display: flex;
+    padding: 2%;
+    height: 300px;
+    width: 96%;
+    align-items: center;
+    justify-content: center;
+    background-image: url(GreatWall.jpg);
+    background-size: 1400px;
+    background-position-y: -200px;
+    border-top: black solid 4px;
+}
+
+div.imgdisplaylayout{
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#hobbieimg{
+    width: 150px;
+    border: double black 5px;
+}
+
+#hobbietext{
+    font-weight: bold;
+    font-family: 'Lucida Sans';
+    font-size: 16px;
+    color: skyblue;
+    text-shadow: 1px 1px 2px gray, 1.5px 1.5px 3px black;
+}
+
 /* Resume */
 div#leftside{
     display: flex;
@@ -295,6 +355,12 @@ iframe#resume{
 }
 
 /* Education */
+    div#flex{
+        display: flex;
+        background-image: url(ChinaMountain.jpg);
+        background-position-y: -400px;
+        background-size: 1400px;
+    }
     div.edubg{
         background-image: url(rpi.jpg);
         background-size: 1600px;
@@ -344,11 +410,251 @@ iframe#resume{
         font-weight: 600;
     }
 
+    div.Eduinfolayout{
+        border-bottom: black 4px solid;
+    }
+    
+    div#leftbar{
+        width: 200px;
+        float: left;
+    }
+    
+    button#edubutton:hover {
+        background-color: #383838;
+    }
+    button#edubutton, button#eduprompt{
+        margin: 0;
+        position: relative;
+        background: gray;
+        font-weight: bold;
+        font-family: "Times New Roman";
+        height: 50px;
+        max-width: 200px;
+        min-width: 200px;
+        font-size: 14px;
+        color: black;
+        border: none;
+        border-right: 4px solid black;
+        text-shadow: 1px 1px 2px #383838;
+    }
+
+    button.lastbut{
+        border-bottom: none;
+    }
+
+    button#eduprompt{
+        height: 70px;
+        font-size: 20px;
+        border-bottom: black solid 4px;
+    }
+
+/* Projects */
+div#leftside2{
+    display: flex;
+    float: left;
+    width: 10%;
+    height: 350px;
+    background-image: url(Leftside.jpg);
+    background-position: right 0px;
+    background-size: 135px;
+    border-right: rgb(41, 40, 56) 5px solid;
+}
+
+div#Area{
+    position: relative;
+    width: 80%;
+    height: 350px;
+    padding: 0;
+}
+
+div#rightside2{
+    display: flex;
+    float: right;
+    width: 10%;
+    height: 350px;
+    background-image: url(rightside.jpg);
+    background-size: 135px;
+    border-left: rgb(41, 40, 56) 5px solid;
+}
+
+div#topcover{
+    position: absolute;
+    background-image: url(top.jpg);
+    background-size: 300px;
+    background-position-y: -305px;
+    z-index: 3;
+    width: 100%;
+    top: 0%;
+    height: 60px;
+}
+
+div#leftcover{
+    position: absolute;
+    background-image: url(metaldoor.jpg);
+    background-size: 200px;
+    background-position: right 60px;
+    z-index: 2;
+    width: 50%;
+    right: 50%;
+    height: 350px;
+}
+
+div#leftcoveropen{
+    display: none;
+    position: absolute;
+    background-image: url(metaldoor.jpg);
+    background-size: 200px;
+    background-position: right 60px;
+    z-index: 2;
+    width: 0%;
+    left: 50%;
+    height: 350px;
+    animation-name: opendoor;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+
+div#rightcover{
+    position: absolute;
+    background-image: url(metaldoor.jpg);
+    background-size: 200px;
+    background-position: left 60px;
+    z-index: 2;
+    width: 50%;
+    left: 50%;
+    height: 350px;
+}
+
+div#rightcoveropen{
+    display: none;
+    position: absolute;
+    background-image: url(metaldoor.jpg);
+    background-size: 200px;
+    background-position: left 60px;
+    z-index: 2;
+    width: 0%;
+    right: 50%;
+    height: 350px;
+    animation-name: opendoor;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+button#lock{
+    position: absolute;
+    left: 50%;
+    z-index: 3;
+    top: 47%;
+    left: 47%;
+    width: 6%;
+    height: 6%;
+    background: none;
+    border: none;
+    justify-content: center;
+}
+
+#lockimg{
+    width: 100%;
+}
+
+#leftarrow, #rightarrow{
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: 50%;
+}
+#leftarrow{
+    display: none;
+    left: 2%;
+}
+#rightarrow{
+    display: none;
+    right: 2%;
+}
+
+/* The Projects */
+#projintro{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px white, 3px 3px 4px gray;
+}
+.projgalley{
+    display: flex;
+}
+#projimg{
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 70px;
+    border: black double 5px;
+    align-self: center;
+}
+#projdesc{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    background-color: rgba(170, 169, 169, 0.456);
+    border: 3px solid black;
+}
+
+#projtitle{
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    background-color: rgba(170, 169, 169, 0.758);
+    border: 3px solid black;
+}
+
+#project0, #project1, #project2, #project3, #project4, #project5, #project6{
+    position: absolute;
+    background-image: url(bookbg.jpg);
+    height: 290px;
+    background-position: -50px 300px;
+    background-size: 1200px;
+    display: flex;
+    top: 60px;
+    overflow: scroll;
+}
+#project1, #project2, #project3, #project4, #project5, #project6{
+    display: none;
+}
+#project1{
+    background-image: url(gamed1.jpg);
+}
+#project2{
+    background-image: url(gamed2.jpg);
+}
+#project3{
+    background-image: url(discord.jpg);
+    background-position: -200px 500px;
+}
+#project4{
+    background-image: url(syepbg.png);
+}
+#project5{
+    background-image: url(epbg.jpg);
+}
+#project6{
+    background-image: url(webbg.jpg);
+}
+
+
+
+
+
+
+
 /* Footer */
 footer{
     position: relative;
     margin-top: 100px;
     padding: 0;
+    z-index: 4;
 }
 nav.footer{
     position: fixed;
@@ -397,19 +703,6 @@ nav.footer{
     text-shadow: 1px 1px 1px gray;
 }
 
-div.Eduinfolayout{
-    border-bottom: black 4px solid;
-}
-
-div.edudropdown{
-    max-width: 400px;
-    min-width: 300px;
-    min-height: 300px;
-    max-height: 800px;
-    border-right: black solid 4px;
-}
-
-/* Projects */
 /* Animations */
 @keyframes dropdownanim{
     0%{
@@ -426,5 +719,14 @@ div.edudropdown{
     }
     100%{
         height: 100px;
+    }
+}
+
+@keyframes opendoor {
+    0%{
+        width: 50%;
+    }
+    100%{
+        width: 0px;
     }
 }
